@@ -1,6 +1,6 @@
 const express = require("express")
 const bodyParser = require("body-parser")
-const Routes = require("./routes/index")
+const { Routes } = require("./routes/index")
 const { sequelize } = require("./database/index")
 
 class App {
@@ -24,4 +24,4 @@ class App {
     }
 }
 
-module.exports = App
+module.exports = { App }

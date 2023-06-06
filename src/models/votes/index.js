@@ -9,6 +9,12 @@ const Voters = sequelize.define("voters", {
     allowNull: false
   },
   
+  serialized: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+    unique: true
+  },
+  
   name: {
     type: Sequelize.TEXT,
     allowNull: false

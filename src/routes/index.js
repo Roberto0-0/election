@@ -6,12 +6,17 @@ class Routes {
         this.router = Router()
         
         this.candidate()
+        this.election()
     }
     
     candidate() {
         this.router.post("/candidate/create", new CandidateController().create)
-        this.router.get("/candidates", new CandidateController().readAll)
+        this.router.post("/candidate/voter/:serialized", new CandidateController().vote)
+    }
+    
+    election() {
+      this.router.get("/election/info", new CandidateController().info)
     }
 }
 
-module.exports = Routes
+module.exports = { Routes }

@@ -11,13 +11,13 @@ const Candidates = sequelize.define("candidates", {
   
   name: {
     type: DataTypes.STRING,
-    allowNull: false,
-    unique: true
+    allowNull: false
   },
   
   electoralParty: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   
   number: {
